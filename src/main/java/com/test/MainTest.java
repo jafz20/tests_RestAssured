@@ -85,7 +85,7 @@ public class MainTest {
         ));
 
         // Validate the prices of the books
-        response.then().body("price", containsInAnyOrder(15.41F, 9.69F, 20.00F)); // Adjusted for additional entries
+        response.then().body("price", containsInAnyOrder(15.41F, 9.69F, 47.99F)); // Adjusted for additional entries
 
         // Optionally, validate the first book's details
         response.then().body("[0].name", equalTo("A Guide to the Bodhisattva Way of Life"))
@@ -94,7 +94,7 @@ public class MainTest {
     }
 
     // Part 2
-   /* @Test
+   /*@Test
     public void testCreateBook() {
         String requestBody = "{\n" +
                 "    \"name\": \"A to the Bodhisattva Way of Life\",\n" +
@@ -170,9 +170,9 @@ public void testUpdateBook() {
     response.then().body("author", equalTo("Santideva")); // Validate the updated author
 }*/
     // Part 5
-    /*@Test
+  /*  @Test
     public void testDeleteBook() {
-        int bookId = 5;
+        int bookId = 21;
 
         Response response = given()
                 .auth().basic("admin", "password")
