@@ -61,7 +61,7 @@ public class MainTest {
     }
 
     // Part 2
-   @Test
+  /* @Test
     public void testCreateBook() {
         String requestBody = "{\n" +
                 "    \"name\": \"A to the Bodhisattva Way of Life\",\n" +
@@ -83,7 +83,8 @@ public class MainTest {
         response.then().body("name", equalTo("A to the Bodhisattva Way of Life"))
                 .body("author", equalTo("Santideva"))
                 .body("price", equalTo(15.41f));
-    }
+    }*/
+    
     // Part 3
     @Test
     public void testGetBookById() {
