@@ -1,6 +1,6 @@
 package com.test;
 
-import io.restassured.RestAssured;
+
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
@@ -15,39 +15,6 @@ public class MainTest {
     RequestSpecification requestSpecification;
     Response response;
     ValidatableResponse validatableResponse;
-
-    /*@Test
-    public void verifyStatusCode() {
-
-        // Base URL of the API
-        RestAssured.baseURI = "http://localhost:8082/books";
-
-        // Username and password for Basic Authentication
-        String username = "user"; // Replace with the correct username
-        String password = "password"; // Replace with the correct password
-
-        // Create the request specification
-        RequestSpecification requestSpecification = given()
-                .auth().preemptive().basic(username, password) // Use preemptive basic auth
-                .log().all(); // Log all request details (headers, body, etc.)
-
-        // Send GET request and get the response
-        Response response = requestSpecification.get();
-
-        // Print the response details for debugging
-        System.out.println("Response Status Code: " + response.getStatusCode());
-        System.out.println("Response Body: " + response.prettyPrint());
-        System.out.println("Response Headers: " + response.getHeaders());
-
-        // Perform validation on the response
-        ValidatableResponse validatableResponse = response.then();
-
-
-        validatableResponse.statusCode(200);
-
-        // Validate status line
-        validatableResponse.statusLine("HTTP/1.1 200 ");
-    }*/
     // Part 1
     @Test
     public void testGetBooks() {
@@ -94,7 +61,7 @@ public class MainTest {
     }
 
     // Part 2
-   /*@Test
+   @Test
     public void testCreateBook() {
         String requestBody = "{\n" +
                 "    \"name\": \"A to the Bodhisattva Way of Life\",\n" +
@@ -116,7 +83,7 @@ public class MainTest {
         response.then().body("name", equalTo("A to the Bodhisattva Way of Life"))
                 .body("author", equalTo("Santideva"))
                 .body("price", equalTo(15.41f));
-    }*/
+    }
     // Part 3
     @Test
     public void testGetBookById() {
@@ -170,7 +137,7 @@ public void testUpdateBook() {
     response.then().body("author", equalTo("Santideva")); // Validate the updated author
 }*/
     // Part 5
-  /*  @Test
+   /*@Test
     public void testDeleteBook() {
         int bookId = 21;
 
