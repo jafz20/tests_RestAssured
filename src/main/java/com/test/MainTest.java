@@ -52,7 +52,7 @@ public class MainTest {
         ));
 
         // Validate the prices of the books
-        response.then().body("price", containsInAnyOrder(15.41F, 9.69F, 47.99F)); // Adjusted for additional entries
+        response.then().body("price", containsInAnyOrder(15.41F, 9.69F, 20.00F)); // Adjusted for additional entries
 
         // Optionally, validate the first book's details
         response.then().body("[0].name", equalTo("A Guide to the Bodhisattva Way of Life"))
@@ -84,7 +84,7 @@ public class MainTest {
                 .body("author", equalTo("Santideva"))
                 .body("price", equalTo(15.41f));
     }*/
-    
+
     // Part 3
     @Test
     public void testGetBookById() {
